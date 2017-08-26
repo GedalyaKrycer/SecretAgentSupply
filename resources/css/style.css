@@ -81,19 +81,29 @@ li {
   color: white;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255,255,255,0.5);
+}
+
+nav#mobile {
+  display: none;
+}
+
 /* Product Grid */
-.main-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.container {
+  max-width: 960px;
+  margin: 0px auto;
 }
 
 .products {
   margin: 3rem 0;
   display: flex;
-  width: 960px;
+  width: 100%;
   justify-content:space-between;
   align-content: center;
 }
@@ -125,7 +135,7 @@ li {
 /* Info on Location and Hours */
 .info {
   display: flex;
-  width: 960px;
+  max-width: 960px;
   justify-content: space-between;
   margin-bottom: 4rem;
 }
@@ -153,4 +163,88 @@ footer {
 
 .copyright {
   width: 960px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+  nav#desktop {
+    display: none;
+  }
+
+  nav#mobile {
+    display: block;
+    width: 100%;
+  }
+
+  nav#mobile ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .product {
+    width: 47%;
+  }
+
+  .glasses.product {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .hero-banner {
+    height: 15rem;
+    display: flex;
+  }
+
+  .text-overlay {
+    top: 10rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .site-width {
+    width: 100%;
+    display: flex;
+  }
+
+  .text-overlay h3 {
+    font-size: .77rem;
+    font-weight: bold;
+  }
+
+  .text-overlay h1 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .product {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .watch.product {
+    display: none;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
